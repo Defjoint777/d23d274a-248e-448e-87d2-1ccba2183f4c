@@ -56,10 +56,15 @@ Remember: Every C [function](https://github.com/STEMgraph/0b6b3ce8-418e-4900-ae4
 
 ## 3) Questions
 1. What does it mean for a function to be injective, surjective, bijective?
-2. Can a function in C be truly bijective if the domain is larger than the codomain?
-3. Why do collisions matter in hashing?
-4. What’s the difference between a function that *ignores* its argument and one that *uses* it partially?
-5. How does knowing the cardinality of types help in optimizing or verifying code?
+   Injective means different inputs produces different outputs, surjective means every element from Domain is mapped to element in codomain, bijective means combination of both.
+3. Can a function in C be truly bijective if the domain is larger than the codomain?
+   Nope, function to call injective must be maped to uniq element in B.
+5. Why do collisions matter in hashing?
+   if 2 strings get the same value as hashvalue it means 1 of the string isnt mapped anymore.
+7. What’s the difference between a function that *ignores* its argument and one that *uses* it partially?
+   if we ignoring argument of a function the output might be the same, if we use argument partially we can have different input but with the same output.
+9. How does knowing the cardinality of types help in optimizing or verifying code?
+    If the Compiler knows in uint8_t we can have maxvalue 2^8, and we use in our code for value 3 Datatype int, compiler can optimize our code and execute it faster.
 
 ## 4) Advice
 Use `sizeof(type)` and `<stdint.h>` types to make reasoning about value ranges easier. When debugging unexpected results, ask yourself: *how many inputs exist, and how many outputs are possible?* This can lead directly to understanding bugs in conversions, hashing, or logic.
